@@ -2,7 +2,7 @@
 
 이 문서는 C와 POSIX 소켓으로 만든 웹 서버(+ 리버스 프록시)의 구현 범위, 구조, 실행 방법과 문서 탐색 경로를 기술하는 것을 목적으로 한다.
 
-## 무엇을 만들었나
+## 프로젝트 요약
 
 외부 라이브러리 없이 C로 직접 만든 HTTP/1.x 웹 서버다. 학습 목적의 프로젝트이며 Step 0~8을 현재 브랜치에서 모두 진행했다 ([progress.md](./docs/progress.md)).
 
@@ -57,7 +57,7 @@ flowchart LR
 - 통신 기록은 세션 안에서만 보이며 새로고침하면 초기화된다.
 - 자세한 절차와 수동 장면: [demo/README.md](./demo/README.md)
 
-## 어디부터 보나
+## 문서 정리
 
 ```mermaid
 flowchart LR
@@ -71,14 +71,14 @@ flowchart LR
 
 | 알고 싶은 것 | 문서 |
 | ------------ | ---- |
-| 지금 어디까지 했나 | [progress.md](./docs/progress.md) |
-| 무엇을 만들어야 하나 | [requirements.md](./docs/requirements.md) |
+| 요구사항 | [requirements.md](./docs/requirements.md) |
 | 구조와 설계 선택 | [architecture.md](./docs/architecture.md) |
-| 그 선택을 왜 했나 | [decisions.md](./docs/decisions.md) → Step의 `decision.md` |
-| 테스트가 몇 개이고 몇 개 통과했나 | [test-plan.md](./docs/test-plan.md) |
+| 선택 과정 | [decisions.md](./docs/decisions.md) → Step의 `decision.md` |
+| 테스트 기록 | [test-plan.md](./docs/test-plan.md) |
 | 검증 결과 | [verification.md](./docs/verification.md) |
 | Step별 요구사항·테스트·구현·검증 | `docs/steps/step-N-이름/README.md` |
 | 배경 지식 | [docs/study/](./docs/study/00-overview.md) |
+| 회고 | [docs/retrospective.md](./docs/retrospective.md) |
 
 ## 폴더 구조
 
@@ -94,6 +94,7 @@ mini-webserver/
     ├── decisions.md · test-plan.md · verification.md
     ├── assignment.md                       과제 원문
     ├── technical-writing-principles.md     문서 작성 기준
+    ├── retrospective.md                    회고
     ├── steps/step-N-이름/                  README.md(진행 추적) · decision.md(결정 기록)
     └── study/                              학습 자료
 ```
